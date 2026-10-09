@@ -6,7 +6,7 @@
 - [x] Add pure Kotlin paginated scanner and unit tests.
 - [x] Add safe bounded private image cache and unit tests.
 - [x] Add separate Room metadata index and incremental reconciliation (not yet connected to UI/real provider).
-- [x] Enable new feature-branch debug APK CI artifact; CI run 37944089312 produced an installable debug APK from 4dafff4. Latest additions require their own run.
+- [x] Enable new feature-branch debug APK CI artifact; CI run 37944509717 produced a debug APK from accc171 and passed tests; a subsequent docs-only commit does not change compiled Kotlin files.
 - [ ] Resolve stable official PikPak mobile OAuth and read-only API access.
 - [ ] Build PikPak auth/folder UI, select/exclude recursive folders and test on real account.
 - [ ] Wire on-demand image cache into existing bitmap preparation and HOME/LOCK setting.
