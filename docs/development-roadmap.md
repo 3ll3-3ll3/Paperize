@@ -3,10 +3,10 @@
 ## Incremental deliverables
 - [x] Verify true fork, upstream relationship and GPL-3.0; create isolated `feature/pikpak-cloud-gallery`.
 - [x] Inspect source + risk assessment; document tested vs untested assumptions.
-- [ ] Add pure Kotlin paginated scanner and unit tests.
-- [ ] Add safe bounded private image cache and unit tests.
-- [ ] Add separate Room metadata index and incremental reconciliation.
-- [ ] Enable new feature-branch debug APK CI artifact; confirm CI result.
+- [x] Add pure Kotlin paginated scanner and unit tests.
+- [x] Add safe bounded private image cache and unit tests.
+- [x] Add separate Room metadata index and incremental reconciliation (not yet connected to UI/real provider).
+- [x] Enable new feature-branch debug APK CI artifact; CI run 37944089312 produced an installable debug APK from 4dafff4. Latest additions require their own run.
 - [ ] Resolve stable official PikPak mobile OAuth and read-only API access.
 - [ ] Build PikPak auth/folder UI, select/exclude recursive folders and test on real account.
 - [ ] Wire on-demand image cache into existing bitmap preparation and HOME/LOCK setting.

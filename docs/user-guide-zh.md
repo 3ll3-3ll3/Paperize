@@ -17,3 +17,7 @@
 
 ## 开发状态
 官方认证与真实图片下载尚未接通，不存在可验证的 PikPak 登录按钮或成品 APK。关注本仓库 PR 与 Actions；安装任何测试 APK 前确认其构建来源。
+
+## 已构建的技术预览 APK（不含 PikPak 登录）
+
+GitHub Actions [Run #37944089312](https://github.com/3ll3-3ll3/Paperize/actions/runs/37944089312) 上传了名称为 `paperize-pikpak-debug` 的 Artifact（对应 Commit `4dafff4`，不是最新代码）。在该运行页面 Artifacts 区下载 ZIP、解压并获取其中的 Debug APK。此 APK **不能**连接 PikPak 云端图库；它用于验证基础代码可编译，未经一加 Ace 2 实机验证。
