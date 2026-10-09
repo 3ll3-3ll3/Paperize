@@ -22,10 +22,16 @@ jobs:
           distribution: temurin
           java-version: '17'
           cache: gradle
-      - name: Android SDK
-        uses: android-actions/setup-android@v3
-      - name: Install target Android SDK
-        run: sdkmanager "platforms;android-37" "platform-tools"
+      # GitHub-hosted Ubuntu runners already include Android SDK command-line tools.
+      # setup-android@v3 currently attempts to install the removed legacy "tools" package.
+      - name: Install Android SDK API 37
+        shell: bash
+        run: |
+          SDK_ROOT="${ANDROID_SDK_ROOT:-${ANDROID_HOME:-/usr/local/lib/android/sdk}}"
+          echo "ANDROID_HOME=$SDK_ROOT" >> "$GITHUB_ENV"
+          echo "ANDROID_SDK_ROOT=$SDK_ROOT" >> "$GITHUB_ENV"
+          yes | "$SDK_ROOT/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
+          "$SDK_ROOT/cmdline-tools/latest/bin/sdkmanager" "platforms;android-37" "platform-tools"
       - name: Unit tests
         run: bash ./gradlew :app:testDebugUnitTest --stacktrace
       - name: Build debug APK
