@@ -33,7 +33,7 @@ jobs:
           yes | "$SDK_ROOT/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
           # Android 17/API 37 is on the preview channel in this upstream revision.
           "$SDK_ROOT/cmdline-tools/latest/bin/sdkmanager" --channel=3 --list | grep -E 'platforms;android-(37|CinnamonBun)' || true
-          "$SDK_ROOT/cmdline-tools/latest/bin/sdkmanager" --channel=3 "platforms;android-37" "platform-tools"
+          "$SDK_ROOT/cmdline-tools/latest/bin/sdkmanager" --channel=3 "platforms;android-37.0" "platform-tools"
       - name: Unit tests
         run: bash ./gradlew :app:testDebugUnitTest --stacktrace
       - name: Build debug APK
